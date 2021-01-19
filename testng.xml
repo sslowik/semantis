@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/pl.semantis">
+        <classes>
+
+            <class name="backendSuite.TypicodeApiTests">
+                <methods>
+                    <include name="TC1_getPostsTest"/>
+                    <include name="TC2_getFirstPostTest"/>
+                    <include name="TC3_getFirstPostCommentsTest"/>
+                    <include name="TC4_getCommentsByPostIdTest"/>
+                    <include name="TC5_createPostTest"/>
+                    <include name="TC6_putToFirstPostTest"/>
+                    <include name="TC7_patchFirstPostTest"/>
+                    <include name="TC8_deleteFirstPostTest"/>
+                </methods>
+            </class>
+            <class name="frontendSuite.AddItemsTest">
+                <methods>
+                    <include name="openUrl"/>
+                    <include name="addItemsToBasket"/>
+                </methods>
+            </class>
+            <class name="frontendSuite.RecordedTest">
+                <methods>
+                    <include name="testUntitledTestCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter"/>
+        <listener class-name="org.testng.reporters.FailedReporter"/>
+    </listeners>
+</suite>
